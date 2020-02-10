@@ -13,4 +13,11 @@ Through this schema, the database is normalized and organized in such a way that
 
 # ETL pipeline
 
-Regarding the ETL pipeline, the original data was in the form of JSON format. Using the Python backend, the database was organized in the above described star schema.
+Regarding the ETL pipeline, the original data was in the form of JSON format. Using the Python backend, the database was organized in the above described star schema. 
+
+# How to run the codes
+Depending on the system, postgreSQL should be installed in the local machine. For Mac users, this link illustrates how to set up PostgreSQL on the machine: https://www.codementor.io/@engineerapart/getting-started-with-postgresql-on-mac-osx-are8jcopb.
+After the installation, to run the code, create_table.py needs to be run.
+For OS, simply type "python create_tables.py" at the terminal. After running the code, etl.py needs to be run by typing "python etl.py"
+
+

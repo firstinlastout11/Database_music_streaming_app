@@ -3,6 +3,10 @@ from sql_queries import create_table_queries, drop_table_queries
 
 
 def create_database():
+        """
+        This function serves to create the database in the backend postgreSQL
+        Also, it connects the created database to the python
+        """
     # connect to default database
     conn = psycopg2.connect("host=127.0.0.1 dbname=studentdb user=student password=student")
     conn.set_session(autocommit=True)
@@ -23,12 +27,18 @@ def create_database():
 
 
 def drop_tables(cur, conn):
+        """
+        This function serves to drop the tables using the defined queries
+        """
     for query in drop_table_queries:
         cur.execute(query)
         conn.commit()
 
 
 def create_tables(cur, conn):
+        """
+        This function serves to create the tables using the pre-defined queries
+        """
     for query in create_table_queries:
         cur.execute(query)
         conn.commit()

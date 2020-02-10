@@ -1,5 +1,8 @@
 # DROP TABLES
+"""
+These functions are to drop tables if they exist to avoid any conflicts
 
+"""
 songplay_table_drop = "DROP TABLE IF EXISTS songplays"
 user_table_drop = "DROP TABLE IF EXISTS users"
 song_table_drop = "DROP TABLE IF EXISTS songs"
@@ -7,7 +10,7 @@ artist_table_drop = "DROP TABLE IF EXISTS artists"
 time_table_drop = "DROP TABLE IF EXISTS time"
 
 # CREATE TABLES
-
+# Using the primary key of songplay_id
 songplay_table_create = ("""
 CREATE TABLE IF NOT EXISTS songplays (
     songplay_id serial PRIMARY KEY,
@@ -31,6 +34,7 @@ gender varchar NOT NULL,
 level varchar NOT NULL);
 """)
 
+# song table creation
 song_table_create = ("""
 CREATE TABLE IF NOT EXISTS songs (
     song_id varchar PRIMARY KEY, 
